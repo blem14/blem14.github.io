@@ -1,14 +1,19 @@
 import '../assets/css/Bio.css';
-import logo from '../assets/logo.svg';
-import { FaRegSmileWink } from 'react-icons/fa';
-import { Component } from 'react';
+import Logo from './Logo.js';
+import ParalaxElement from './ParalaxElement.js';
 
-class Bio extends Component{
+class Bio extends ParalaxElement{
   render() {
     return (
       <div className="Bio">
-        <img src={logo} className="Bio-logo" alt="logo" />
-        <p className="Bio-phrase">I'm blem14, and this is my favourite page on the internet! <FaRegSmileWink /></p>
+          <div className="Bio-container">
+            <Logo className="Bio-logo"/>
+            <div className="Bio-about">
+              <span>blem14</span>
+              <span>Software Developer</span>
+              <span></span>
+            </div>
+        </div>
       </div>
     );
   }
